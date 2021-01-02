@@ -7,8 +7,8 @@ if(cluster.isMaster){
         cluster.fork();
     }
 
-    cluster.on('exit',(c,s)=>{
-        console.log(`Worker exited with exit code ${c} starting a new workwe.`);
+    cluster.on('exit',(w,c,s)=>{
+        console.log(`Worker id ${w.id}  exited with exit code ${c} starting a new workwe.`);
         cluster.fork();
     });
 }else{

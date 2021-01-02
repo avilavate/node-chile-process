@@ -12,4 +12,4 @@ server.listen(3333,()=>{
 
 setTimeout(() => {
     process.exit(1);
-}, Math.floor(Math.random()*1000));
+}, Math.floor(Math.random()*100000));
